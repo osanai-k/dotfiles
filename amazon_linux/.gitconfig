@@ -1,0 +1,7 @@
+[credential]
+	helper = cache --timeout=43200
+[user]
+	name = Kazuyoshi Osanai
+	email = osanai_k@worksap.co.jp
+[alias]
+	graph=log --graph --oneline --decorate=full --branches --tags

@@ -1,0 +1,16 @@
+term screen
+
+escape ^Tt
+
+defscrollback 8000
+
+hardstatus alwayslastline "%-w%{= ck}%n %t%{-}%+w"
+hardstatus off
+
+sorendition "+rb .G"
+
+startup_message off
+
+altscreen on
+termcapinfo xterm* ti@:te@
+termcapinfo cygwin* ti@:te@
