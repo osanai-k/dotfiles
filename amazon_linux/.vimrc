@@ -22,7 +22,6 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'justinj/vim-react-snippets'
 NeoBundle 'dagwieers/asciidoc-vim'
 
 NeoBundle 'altercation/vim-colors-solarized'
