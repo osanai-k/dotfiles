@@ -23,6 +23,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'dagwieers/asciidoc-vim'
+NeoBundle 'kana/vim-filetype-haskell'
+NeoBundle 'ujihisa/neco-ghc'
 
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'croaker/mustang-vim'
@@ -57,6 +59,8 @@ set backupcopy=yes
 set pumheight=10
 set backspace=indent,eol,start
 
+autocmd BufNewFile,BufRead *.sql set expandtab tabstop=2 shiftwidth=2
+
 if has('gui_running')
 	set background=dark
 	set guioptions+=a
@@ -75,8 +79,16 @@ if has('conceal')
 endif
 
 set foldmethod=marker
-set foldcolumn=1
+set foldcolumn=2
 set fillchars=vert:\|
+set foldtext=FoldCCtext()
+
+autocmd FileType vim :set foldmethod=marker
+autocmd FileType vim :set foldlevel=0
+
+autocmd FileType javascript :set foldmethod=syntax
+autocmd FileType javascript :set foldlevel=1
+autocmd FileType javascript :set foldnestmax=1
 
 hi Pmenu ctermbg=4 ctermfg=7
 hi PmenuSel ctermbg=1 ctermfg=7
@@ -85,6 +97,7 @@ hi PmenuSbar ctermbg=4
 set hlsearch
 nmap <Esc><Esc> ;nohlsearch<CR><Esc>
 
+set laststatus=2
 set statusline=%f%m%r%h%w\ [%{&ff}]
 set statusline+=%=%l,%c
 
